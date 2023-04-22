@@ -15,4 +15,4 @@ def search_files(primarykey, folderpath, outputfile):
                             if primarykey in line:
                                 writer.writerow([filepath, line.strip()])
 
-search_files("SpringApplicationBuilder", "C:\abc\wara", "E:\Jason2020\wara\output.csv")
+search_files("SpringApplicationBuilder", "C:\abc\wara", "C:\abc2020\wara\output.csv")
