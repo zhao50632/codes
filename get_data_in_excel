@@ -1,0 +1,19 @@
+import pandas as pd
+
+# 读取Excel文件
+df = pd.read_excel('F:\gitee.xlsx')
+
+# 根据第一列的值是AAA来筛选数据
+filtered_data = df[df.iloc[:, 0] == 'AAA']
+
+# 获取第4列的值并去重
+result = filtered_data.iloc[:, 3].drop_duplicates()
+
+print(result)
+
+query_list = []
+for value in result:
+    query_list.append(f'select * from {value}')
+
+for value in query_list:
+    print(value)
